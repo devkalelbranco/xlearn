@@ -1,0 +1,31 @@
+.x-value-class {
+    top: 39vh;
+    left: 33vh;
+    position: absolute;
+    h4 {
+        span {
+            color: var(--bs-success) !important;
+        }
+    }
+}
+
+.x-card-teacher{
+    overflow: hidden;
+    img {
+        max-width: 100%;
+        -moz-transition: all 0.3s;
+        -webkit-transition: all 0.3s;
+        transition: all 0.3s;
+        cursor: pointer;
+    }
+}
+.x-card-teacher:hover img{
+    -moz-transform: scale(1.1);
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+}
+
+.x-card-body {
+    z-index: 1;
+    background-color: white;
+}

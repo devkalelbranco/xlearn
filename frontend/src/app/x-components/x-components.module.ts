@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { XInputComponent } from './x-input/x-input.component';
 import { XPasswordComponent } from './x-password/x-password.component';
 import { XButtonComponent } from './x-button/x-button.component';
+import { XCardTeacherComponent } from './x-card-teacher/x-card-teacher.component';
 
 
 
@@ -10,7 +11,8 @@ import { XButtonComponent } from './x-button/x-button.component';
   declarations: [
     XInputComponent,
     XPasswordComponent,
-    XButtonComponent
+    XButtonComponent,
+    XCardTeacherComponent
   ],
   imports: [
     CommonModule
@@ -18,7 +20,8 @@ import { XButtonComponent } from './x-button/x-button.component';
   exports:[
     XInputComponent,
     XPasswordComponent,
-    XButtonComponent
+    XButtonComponent,
+    XCardTeacherComponent
   ]
 })
 export class XComponentsModule { }
