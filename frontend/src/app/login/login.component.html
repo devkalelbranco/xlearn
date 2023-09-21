@@ -3,12 +3,12 @@
         <div class="row gx-6">
             <div class="col align-self-center">
                 <div class="col-4 offset-md-4">
-                    <p class="text-center">XLearn</p>
-                    <input type="text" class="form-control" placeholder="Usuário" aria-label="Usuário" aria-describedby="basic-addon1">
-                    <input type="password" class="form-control mt-4" placeholder="Senha" aria-label="Senha" aria-describedby="basic-addon1">
-                    <div class="d-grid gap-2">
-                        <button type="button" class="btn btn-primary mt-4 btn-lg" tabindex="-1" role="button" aria-disabled="true">Entrar</button>
+                    <div class="text-center">
+                        <img src="./assets/logo_2.png" alt="XLearn" class="img-fluid">
                     </div>
+                    <x-input placeholder="Usuário" arira-label="Usuário"></x-input>
+                    <x-password placeholder="Senha" aria-label="Senha" class="mt-4"></x-password>
+                    <x-button class="d-grid gap-2 mt-4" size="large" label="Entrar" type="primary" (click)="login()"></x-button>
                 </div>
             </div>
         </div>
