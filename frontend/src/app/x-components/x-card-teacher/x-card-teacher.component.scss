@@ -1,12 +1,13 @@
 .x-value-class {
-    top: 39vh;
-    left: 33vh;
+    top: 33vh;
+    left: 26vh;
     position: absolute;
     h4 {
         span {
             color: var(--bs-success) !important;
         }
     }
+    z-index: 2;
 }
 
 .x-card-teacher{
