@@ -4,7 +4,7 @@ import { Router } from '@angular/router';
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.sass']
+  styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
 
@@ -14,5 +14,9 @@ export class AppComponent {
 
   get isLoggedIn():boolean{
     return !this.router.url.includes('login')
+  }
+
+  logout(){
+    this.router.navigate(['login']);
   }
 }
