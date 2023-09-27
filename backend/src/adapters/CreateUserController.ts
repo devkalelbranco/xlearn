@@ -13,7 +13,8 @@ export default class CreateUserController{
                     const {name, email, password} = req.body;
                     await useCase.executar({name, email, password});
                     response.statusCode = 201;
-                    return response;
+                    response.json({});
+                    return response
                 } catch (error:any) {
                     response.statusCode = 500
                     response.send({message: error.message})

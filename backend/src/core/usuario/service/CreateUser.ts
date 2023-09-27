@@ -1,5 +1,6 @@
 import UseCase from "../../shared/UseCase";
 import UserRepository from "./UserRepository";
+import bcrypt from "bcrypt";
 
 type Input = {
     name:string;
@@ -19,7 +20,9 @@ export default class CreateUser implements UseCase<Input, void> {
             throw new Error("Usuário ja existe")
         }
 
-        await this.repository.create({name, email, password});
+        const cryptPassword = await bcrypt.hash(password, 10);
+
+        await this.repository.create({name, email, password:cryptPassword});
     }
     
 }
