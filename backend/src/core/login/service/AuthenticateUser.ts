@@ -1,3 +1,4 @@
+import { UnauthorizedError } from "../../shared/ApiError";
 import UseCase from "../../shared/UseCase";
 import User from "../../usuario/model/User";
 import UserRepository from "../../usuario/service/UserRepository";
@@ -13,12 +14,12 @@ export default class AuthenticateUser implements UseCase<Partial<User>, Partial<
 
         const userExists = await this.repository.findByEmail(email ?? '') ?? null
         if(!userExists){
-            throw new Error("Usuário ou senha inválidos")
+            throw new UnauthorizedError("Usuário ou senha inválidos")
         }
 
         const verifyPass = await bcrypt.compare(password ?? '', userExists.password)
         if(!verifyPass){
-            throw new Error("Usuário ou senha inválidos")
+            throw new UnauthorizedError("Usuário ou senha inválidos")
         }
 
         const {id} = userExists

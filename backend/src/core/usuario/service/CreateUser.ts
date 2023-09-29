@@ -1,3 +1,4 @@
+import { BadRequestError } from "../../shared/ApiError";
 import UseCase from "../../shared/UseCase";
 import UserRepository from "./UserRepository";
 import bcrypt from "bcrypt";
@@ -17,7 +18,7 @@ export default class CreateUser implements UseCase<Input, void> {
         
         const userExists = await this.repository.findByEmail(email)
         if(userExists){
-            throw new Error("Usuário ja existe")
+            throw new BadRequestError("Usuário ja existe")
         }
 
         const cryptPassword = await bcrypt.hash(password, 10);
