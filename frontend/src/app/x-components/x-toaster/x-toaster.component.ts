@@ -12,6 +12,7 @@ export class XToasterComponent {
   
   protected message:string = "";
   protected type:string = ""
+  protected types = XToasterTypes;
 
   public show(message:string = ""){
     this.message = message;
