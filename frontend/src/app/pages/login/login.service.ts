@@ -1,7 +1,7 @@
 import { Injectable } from "@angular/core";
-import { LoginToken } from "../models/login-token";
+import { LoginToken } from "../../models/login-token";
 import { HttpClient } from "@angular/common/http"
-import { LoginUser } from "../models/login-user";
+import { LoginUser } from "../../models/login-user";
 import { lastValueFrom } from "rxjs";
 import { environment } from "src/environment/environment.dev";
 @Injectable()

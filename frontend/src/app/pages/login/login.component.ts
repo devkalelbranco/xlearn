@@ -1,9 +1,9 @@
 import { Component, ElementRef, ViewChild } from '@angular/core';
 import { Router } from '@angular/router';
 import { LoginService } from './login.service';
-import { LoginToken } from '../models/login-token';
+import { LoginToken } from '../../models/login-token';
 import * as bootstrap from 'bootstrap';
-import { XToasterService } from '../x-services/x-toaster/XToaster.service';
+import { XToasterService } from '../../x-services/x-toaster/XToaster.service';
 import { environment } from 'src/environment/environment.dev';
 
 
