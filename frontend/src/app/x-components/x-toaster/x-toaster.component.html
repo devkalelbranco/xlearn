@@ -4,6 +4,7 @@
             <div class="d-flex">
               <div class="toast-body">
                 <i *ngIf="type == types.DANGER" class="bi bi-bug-fill">&nbsp;</i>
+                <i *ngIf="type == types.SUCCESS" class="bi bi-check-circle-fill">&nbsp;</i>                
                 {{message}}
               </div>
               <button type="button" class="btn-close btn-close-white me-2 m-auto" data-bs-dismiss="toast" aria-label="Close"></button>
