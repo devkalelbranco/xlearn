@@ -4,6 +4,7 @@ import { LoginService } from './login.service';
 import { LoginToken } from '../models/login-token';
 import * as bootstrap from 'bootstrap';
 import { XToasterService } from '../x-services/x-toaster/XToaster.service';
+import { environment } from 'src/environment/environment.dev';
 
 
 @Component({
@@ -24,19 +25,19 @@ export class LoginComponent {
   
   login(){
     
-    this.loginService.login(this.email, this.password).then((res:LoginToken) => {
+    this.loginService.login(this.email, this.password).then((res) => {
       if(res?.token){
-        sessionStorage.setItem('x-learn-token', res.token);
-        this.router.navigate(['home'])
-      }
-
-    }).catch(({error}) => {     
-      if(error.message){
-        this.toasterService.error(error.message);
+        this.router.navigate(['home']);
       } else {
-        this.toasterService.error("Erro ao autenticar, tente novamente mais tarde");
+        this.toasterService.error("Erro ao autenticar, tente novamente.");
       }
-
-    })
+    }).catch((err) => {
+      if(err?.message){
+        this.toasterService.error(err.message)
+      } else {
+        this.toasterService.error("Erro ao autenticar, tente novamente.");
+      }
+    });
+      
   }
 }

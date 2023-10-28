@@ -55,7 +55,13 @@
                   "maximumError": "4kb"
                 }
               ],
-              "outputHashing": "all"
+              "outputHashing": "all",
+              "fileReplacements": [
+                {
+                  "replace": "src/environment/environment.dev.ts",
+                  "with": "src/environment/environment.ts"
+                }
+              ]
             },
             "development": {
               "buildOptimizer": false,
@@ -63,7 +69,13 @@
               "vendorChunk": true,
               "extractLicenses": false,
               "sourceMap": true,
-              "namedChunks": true
+              "namedChunks": true,
+              "fileReplacements": [
+                {
+                  "replace": "src/environment/environment.dev.ts",
+                  "with": "src/environment/environment.ts"
+                }
+              ]
             }
           },
           "defaultConfiguration": "production"
