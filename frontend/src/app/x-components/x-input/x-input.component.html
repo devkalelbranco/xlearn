@@ -1,1 +1,1 @@
-<input type="text" [class]="_class" [placeholder]="placeholder" [attr.aria-label]="ariaLabel" aria-describedby="basic-addon1">
+<input type="text" [class]="_class" [placeholder]="placeholder" [attr.aria-label]="ariaLabel" aria-describedby="basic-addon1" [(ngModel)]="value" (ngModelChange)="valueChange.emit(value)" />

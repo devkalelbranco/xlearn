@@ -9,7 +9,9 @@ import AuthenticateUserController from './adapters/AuthenticateUserController';
 import { errorMiddleware } from './middlewares/errorMiddleware';
 
 const app = express();
+const cors = require('cors')
 
+app.use(cors()) /*Melhorar essa parte*/
 app.use(express.json())
 /**********************************ROUTES *********************************/
 

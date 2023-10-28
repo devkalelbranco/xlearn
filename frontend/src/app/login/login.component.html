@@ -6,8 +6,8 @@
                     <div class="text-center">
                         <img src="./assets/logo_2.png" alt="XLearn" class="img-fluid">
                     </div>
-                    <x-input placeholder="Usuário" arira-label="Usuário"></x-input>
-                    <x-password placeholder="Senha" aria-label="Senha" class="mt-4"></x-password>
+                    <x-input placeholder="Usuário" aria-label="Usuário" [(ngModel)]="email"></x-input>
+                    <x-password placeholder="Senha" aria-label="Senha" class="mt-4" [(ngModel)]="password"></x-password>
                     <x-button class="d-grid gap-2 mt-4" size="large" label="Entrar" type="primary" (click)="login()"></x-button>
                 </div>
             </div>

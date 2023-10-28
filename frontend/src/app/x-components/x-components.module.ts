@@ -4,6 +4,8 @@ import { XInputComponent } from './x-input/x-input.component';
 import { XPasswordComponent } from './x-password/x-password.component';
 import { XButtonComponent } from './x-button/x-button.component';
 import { XCardTeacherComponent } from './x-card-teacher/x-card-teacher.component';
+import { FormsModule } from '@angular/forms';
+import { XToasterComponent } from './x-toaster/x-toaster.component';
 
 
 
@@ -12,16 +14,19 @@ import { XCardTeacherComponent } from './x-card-teacher/x-card-teacher.component
     XInputComponent,
     XPasswordComponent,
     XButtonComponent,
-    XCardTeacherComponent
+    XCardTeacherComponent,
+    XToasterComponent    
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    FormsModule
   ],
   exports:[
     XInputComponent,
     XPasswordComponent,
     XButtonComponent,
-    XCardTeacherComponent
+    XCardTeacherComponent,
+    XToasterComponent
   ]
 })
 export class XComponentsModule { }
