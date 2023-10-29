@@ -1,0 +1,23 @@
+{
+  "name": "default",
+  "version": "1.0.0",
+  "description": "Default Project",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",        
+    "dev": "concurrently --kill-others \"cd backend && npm run dev\" \"cd frontend && npm run start\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/devkalelbranco/xlearn.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/devkalelbranco/xlearn/issues"
+  },
+  "homepage": "https://github.com/devkalelbranco/xlearn#readme",
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  }
+}
