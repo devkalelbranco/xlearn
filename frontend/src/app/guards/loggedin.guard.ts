@@ -14,7 +14,7 @@ export class LoggedInGuard {
     }
 
     canActivate(route: ActivatedRouteSnapshot, state: RouterStateSnapshot): boolean | UrlTree | Observable<boolean | UrlTree> | Promise<boolean | UrlTree> {
-        console.log('teste', this.authService.isLoggedIn())
+        
         if(!this.authService.isLoggedIn()){
             if(!this.router.url.includes('login')){
                 this.router.navigate(['login']);
