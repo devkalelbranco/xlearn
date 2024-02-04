@@ -6,7 +6,7 @@
   "scripts": {
     "test": "test",
     "dev": "ts-node-dev --inspect --transpile-only --ignore-watch node_modules src/server.ts",
-    "build": "npx tsc"
+    "build": "tsc"
   },
   "author": "Kalel Branco Chaves",
   "license": "MIT",
