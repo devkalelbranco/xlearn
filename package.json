@@ -6,7 +6,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",        
     "dev": "concurrently --kill-others \"cd backend && npm run dev\" \"cd frontend && npm run start\"",
-    "build": "cd backend & npm run build & cd .. & cd frontend & npm run build"
+    "install": "cd backend & npm install & cd .. & cd frontend & npm i",
+    "build": "npm run install & cd backend & npm run build & cd .. & cd frontend & npm run build"
   },
   "repository": {
     "type": "git",
