@@ -19,4 +19,8 @@ export class AppComponent {
   logout(){
     this.router.navigate(['login']);
   }
+
+  goToTeacherMaintenance(){
+    this.router.navigate(['teacherMaintenance']);
+  }
 }

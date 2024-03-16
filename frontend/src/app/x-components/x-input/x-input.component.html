@@ -1,1 +1,4 @@
-<input type="text" [class]="_class" [placeholder]="placeholder" [attr.aria-label]="ariaLabel" aria-describedby="basic-addon1" [(ngModel)]="value" (ngModelChange)="valueChange.emit(value)" />
+<div class="form-group">
+    <label *ngIf="label" [for]="id">{{label}}</label>
+    <input [type]="type" [id]="id" [name]="name" [class]="_class" [placeholder]="placeholder" [attr.aria-label]="ariaLabel" aria-describedby="basic-addon1" [(ngModel)]="value" (ngModelChange)="valueChange.emit(value)" />
+</div>

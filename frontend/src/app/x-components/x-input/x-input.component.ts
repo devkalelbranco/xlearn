@@ -20,7 +20,11 @@ export class XInputComponent {
   @Output('ngModelChange') valueChange:EventEmitter<string> = new EventEmitter<string>();  
 
   @Input('placeholder') placeholder?:string = "";
+  @Input('type') type?:string = "text";
   @Input('aria-label') ariaLabel?:string = "";
+  @Input('id') id?:string = "";
+  @Input('name') name:string = crypto.randomUUID();
+  @Input('label') label?:string = "";
   @Input('class') set class(value:string) {
     this._class = `form-control ${value}`
   }
